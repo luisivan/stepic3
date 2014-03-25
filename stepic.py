@@ -24,7 +24,7 @@ Stepic uses the Python Image Library
 '''
 
 __author__ = 'Lenny Domnitser <http://domnit.org/>'
-__version__ = '0.3'
+__version__ = '0.5'
 
 
 import warnings
