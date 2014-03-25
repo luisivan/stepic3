@@ -21,7 +21,7 @@
 import optparse
 import sys
 import traceback
-import Image
+from PIL import Image
 import stepic
 
 
@@ -66,20 +66,20 @@ def main():
         sys.exit(2)
     if options.decode == options.encode:
         parser.print_usage()
-        print >> sys.stderr, 'choose either encode or decode'
+        print('choose either encode or decode', file=sys.stderr)
 
     try:
         if options.decode:
             decode_files(options.image_in, options.out)
         elif options.encode:
             encode_files(options.image_in, options.data_in, options.out, options.format)
-    except (TypeError, ValueError), e:
-        print >> sys.stderr, 'error:', e
+    except (TypeError, ValueError) as e:
+        print('error:', e, file=sys.stderr)
         sys.exit(1)
     except KeyboardInterrupt:
         pass
-    except Exception, e:
-        print >> sys.stderr, '%s: %s' % (e.__class__.__name__, e)
+    except Exception as e:
+        print('%s: %s' % (e.__class__.__name__, e), file=sys.stderr)
         if options.debug:
             traceback.print_tb(sys.exc_traceback)
         sys.exit(3)

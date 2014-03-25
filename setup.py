@@ -11,7 +11,7 @@ else:
 
 setup(name='stepic3',
       version=version,
-      description='Python image steganography',
+      description='Python image steganography, for Python 3',
       author='Lenny Domnitser',
       author_email='lenny@domnit.org',
       url='http://domnit.org/stepic/doc/',
