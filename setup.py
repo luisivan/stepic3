@@ -7,7 +7,7 @@ if os.environ.get('RELEASE') == '1':
     import stepic
     version = stepic.__version__
 else:
-    version = 'bzr'
+    version = 'git'
 
 setup(name='stepic',
       version=version,
@@ -26,6 +26,10 @@ setup(name='stepic',
           'Topic :: Multimedia :: Graphics',
           'Topic :: Utilities',
           'Development Status :: 3 - Alpha',
-          'Programming Language :: Python' #duh!
+          'Programming Language :: Python :: 3',
+          'Programming Language :: Python :: 3.1',
+          'Programming Language :: Python :: 3.2',
+          'Programming Language :: Python :: 3.3',
+          'Programming Language :: Python :: 3.4'
           ]
       )
