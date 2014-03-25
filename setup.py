@@ -9,7 +9,7 @@ if os.environ.get('RELEASE') == '1':
 else:
     version = 'git'
 
-setup(name='stepic',
+setup(name='stepic3',
       version=version,
       description='Python image steganography',
       author='Lenny Domnitser',
